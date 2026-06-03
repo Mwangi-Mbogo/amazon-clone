@@ -1,16 +1,51 @@
 
+export const getCartTotal = (cart) =>
+  cart?.reduce(
+    (amount, item) => amount + Number(item.price || 0), 
+    0
+  );
+
 export const initialState = {
   cart: [],
+  user: null,
 };
 
-const reducer = (state, action) =>{
+const reducer = (state, action) => {
+  switch (action.type) {
 
-  switch(action.type){
-    case 'ADD_TO_CART':
-    return{
-      ...state,
-      cart: [...state.cart, action.item],
-    };
+    case "ADD_TO_CART":
+      return {
+        ...state,
+        cart: [...state.cart, action.item],
+      };
+
+    case "REMOVE_FROM_CART": {
+      const index = state.cart.findIndex(
+        (cartItem) =>
+          String(cartItem.id) === String(action.id)
+      );
+
+      let newCart = [...state.cart];
+
+      if (index >= 0) {
+        newCart.splice(index, 1);
+      } else {
+        console.warn(
+          `Can't remove product(id: ${action.id}) cart empty!`
+        );
+      }
+
+      return {
+        ...state,
+        cart: newCart,
+      };
+    }
+
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
 
     default:
       return state;

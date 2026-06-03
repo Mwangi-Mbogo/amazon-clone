@@ -12,29 +12,47 @@ function Home() {
         />
 
         <div className="home__row">
-          <Product title="hp gaming laptop" price={36.99}
-            image="https://m.media-amazon.com/images/I/71XSld5P-TL._AC_UY218_.jpg" rating={1}
+          <Product 
+            id="1"
+            title="hp gaming laptop" price={36.99}
+            image="https://m.media-amazon.com/images/I/71XSld5P-TL._AC_UY218_.jpg" 
+            rating={1}
           />
-          <Product title="wireless mouse" price={29.99}
-            image="https://m.media-amazon.com/images/I/610qzHRTFOL._AC_UY218_.jpg" rating={2}
-          />
-        </div>
-
-        <div className="home__row">
-          <Product title="smartphone" price={199.99}
-            image="https://m.media-amazon.com/images/I/61aU1bmGyML._AC_SX148_SY213_QL70_.jpg" rating={3}
-          />
-          <Product title="Headphones" price={299.99}
-            image="https://m.media-amazon.com/images/I/515FE+S4yLL._AC_SX148_SY213_QL70_.jpg" rating={4}
-          />
-          <Product title="Casio F91W Series" price={599.99}
-            image="https://m.media-amazon.com/images/I/51mu4w1lJwL._AC_SR175,263_QL70_.jpg" rating={5}
+          <Product 
+            id="2"
+            title="wireless mouse" price={29.99}
+            image="https://m.media-amazon.com/images/I/610qzHRTFOL._AC_UY218_.jpg" 
+            rating={2}
           />
         </div>
 
         <div className="home__row">
-          <Product title="LG 34' Curved UltraWide" price={99.99}
-            image="https://m.media-amazon.com/images/I/61c3ChJVf2L._AC_SX148_SY213_QL70_.jpg" rating={1}
+          <Product
+            id="3" 
+            title="smartphone" price={199.99}
+            image="https://m.media-amazon.com/images/I/61aU1bmGyML._AC_SX148_SY213_QL70_.jpg" 
+            rating={3}
+          />
+          <Product 
+            id="4"
+            title="Headphones" price={299.99}
+            image="https://m.media-amazon.com/images/I/515FE+S4yLL._AC_SX148_SY213_QL70_.jpg" 
+            rating={4}
+          />
+          <Product
+            id="5" 
+            title="Casio F91W Series" price={599.99}
+            image="https://m.media-amazon.com/images/I/51mu4w1lJwL._AC_SR175,263_QL70_.jpg" 
+            rating={5}
+          />
+        </div>
+
+        <div className="home__row">
+          <Product
+            id="6" 
+            title="LG 34' Curved UltraWide" price={99.99}
+            image="https://m.media-amazon.com/images/I/61c3ChJVf2L._AC_SX148_SY213_QL70_.jpg" 
+            rating={1}
           />
         </div>
 
